@@ -3,8 +3,8 @@ from .models import Produto, Estoque
 
 @admin.register(Produto)
 class ProdutoAdmin(admin.ModelAdmin):
-  list_display = ('titulo', 'marca', 'preco', 'criacao', 'atualizacao', 'ativo')
+  list_display = ('titulo', 'marca', 'preco', 'criacao', 'ativo')
   
 @admin.register(Estoque)
 class EstoqueAdmin(admin.ModelAdmin):
-  list_display = ('codigo', 'produto', 'quantidade', 'locacao', 'excesso', 'criacao', 'ativo')
+  list_display = ('codigo', 'produto', 'quantidade', 'locacao', 'excesso', 'criacao', 'atualizacao', 'ativo')

@@ -12,7 +12,8 @@ class Base(models.Model):
 class Produto(Base):
   titulo = models.CharField(max_length=255)
   marca = models.CharField(max_length=255)
-  preco = models.DecimalField(max_digits=5000, decimal_places=2)
+  preco = MoneyField(max_digits=14, decimal_places=2, default_currency='BRL')
+  #models.DecimalField(max_digits=5000, decimal_places=2)
   
   class Meta:
     verbose_name = 'Produto'
