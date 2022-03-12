@@ -34,4 +34,4 @@ class Estoque(Base):
     verbose_name_plural= 'Estoques'
     
   def __str__(self):
-    return f'{self.produto} esta com {self.quantidade} unidades nas locações {self.locacao} e excesso {self.excesso}'
+    return f'{self.quantidade} unidades de {self.produto} foram alocados nas locações {self.locacao} e excesso {self.excesso}'
