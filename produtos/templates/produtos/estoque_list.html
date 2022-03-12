@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %} Estoque {% endblock %}
+
+	{% block content %}
+
+	<h2 class="text-center mt-2">Locação de Produtos</h2>
+	
+	<table class="table table-striped table-ligth table-responsive-md min-vw-50 mt-2 mx-auto">
+		<thead>
+			<tr>
+				<th>Códico</th>
+				<th>Produto</th>
+				<th>Quantidade</th>
+				<th>Locação</th>
+				<th>Excesso</th>
+				<th>Data de Entrada</th>
+				<th>Ativo</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in estoque_list %}
+			<tr>
+				<td> {{ item.codigo }}</td>
+				<td> {{ item.produto }} </td>
+				<td> {{ item.quantidade }} </td>
+				<td> {{ item.locacao }} </td>
+				<td> {{ item.excesso }} </td>
+				<td> {{ item.criacao }} </td>
+				<td> {{ item.ativo }} </td>
+			</tr>
+			{%  endfor%}
+		</tbody>
+		
+	</table>
+
+
+
+	
+
+
+
+
+
+	{% endblock %}
